@@ -1,7 +1,8 @@
-#FROM perl:latest
 FROM scottw/alpine-perl
 
 MAINTAINER ben.whosgonna.com@gmail.com
+
+EXPOSE 5000
 
 RUN    apk update && apk upgrade && apk add --no-cache tzdata \
     && cpanm --quiet \
@@ -84,5 +85,5 @@ RUN    apk update && apk upgrade && apk add --no-cache tzdata \
     && rm -rf /usr/share/man/??_* \
     && rm -rf ~/.cpanm/ 
 
-  
+
 ENTRYPOINT /bin/sh
