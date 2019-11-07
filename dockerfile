@@ -1,4 +1,4 @@
-FROM scottw/alpine-perl
+FROM Perl:latest
 
 MAINTAINER ben.whosgonna.com@gmail.com
 
