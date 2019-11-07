@@ -4,8 +4,7 @@ MAINTAINER ben.whosgonna.com@gmail.com
 
 EXPOSE 5000
 
-RUN    apk update && apk upgrade && apk add --no-cache tzdata \
-    && cpanm --quiet \
+RUN cpanm --quiet \
         Dancer2 \
         \
         Dancer2::Template::Haml \
@@ -81,8 +80,6 @@ RUN    apk update && apk upgrade && apk add --no-cache tzdata \
         Dancer2::Plugin::Syntax::GetPost \
         Dancer2::Plugin::UnicodeNormalize \
     \ 
-    && rm -rf /usr/share/man/?? \
-    && rm -rf /usr/share/man/??_* \
     && rm -rf ~/.cpanm/ 
 
 
