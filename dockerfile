@@ -1,4 +1,4 @@
-FROM Perl:latest
+FROM perl:latest
 
 MAINTAINER ben.whosgonna.com@gmail.com
 
